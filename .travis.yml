@@ -16,4 +16,4 @@ script:
   - composer ci
 
 after_script:
-  - php vendor/bin/codacycoverage clover build/logs
+  - php vendor/bin/codacycoverage clover build/logs/clover.xml
