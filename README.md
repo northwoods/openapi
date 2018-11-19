@@ -1,6 +1,8 @@
 # Northwoods OpenApi
 
 [![Build Status](https://img.shields.io/travis/com/northwoods/openapi.svg)](https://travis-ci.com/northwoods/openapi)
+[![Code Grade](https://img.shields.io/codacy/grade/e751fb75929049a6a5387bd821002b6f.svg)](https://www.codacy.com/app/shadowhand/openapi)
+[![Code Coverage](https://img.shields.io/codacy/coverage/e751fb75929049a6a5387bd821002b6f.svg)](https://www.codacy.com/app/shadowhand/openapi)
 [![Latest Stable Version](http://img.shields.io/packagist/v/northwoods/openapi.svg?style=flat)](https://packagist.org/packages/northwoods/openapi)
 [![Total Downloads](https://img.shields.io/packagist/dt/northwoods/openapi.svg?style=flat)](https://packagist.org/packages/northwoods/openapi)
 [![License](https://img.shields.io/packagist/l/northwoods/openapi.svg?style=flat)](https://packagist.org/packages/northwoods/openapi)
