@@ -1,0 +1,9 @@
+includes:
+  - vendor/phpstan/phpstan-phpunit/extension.neon
+  - vendor/phpstan/phpstan-phpunit/rules.neon
+
+parameters:
+  ignoreErrors:
+    - '#Access to an undefined property object::#'
+    - '#Call to function .* with null will always evaluate to false#'
+    - '#Argument of an invalid type object supplied for foreach, only iterables are supported#'
