@@ -7,9 +7,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/northwoods/openapi.svg?style=flat)](https://packagist.org/packages/northwoods/openapi)
 [![License](https://img.shields.io/packagist/l/northwoods/openapi.svg?style=flat)](https://packagist.org/packages/northwoods/openapi)
 
-Tools for working with [OpenAPI][openapi] specifications.
-
-[openapi]: https://www.openapis.org/
+Tools for working with [OpenAPI](https://www.openapis.org/) specifications.
 
 ## Installation
 
@@ -28,10 +26,31 @@ This package supports converting OpenAPI schemas to JSON Schema proper:
 ```php
 use Northwoods\OpenApi\Converter;
 
+// See below for options
+$converter = new Converter($options);
+
+/** @var object */
+$schema = /* load your schema */;
+
+$schema = $converter->convert($schema);
 ```
+
+Note that references are **not** resolved and only schemas can be converted.
+It is recommended that conversion is used in conjunction with
+[justinrainbow/json-schema](https://github.com/justinrainbow/json-schema).
+
+#### Options
+
+The following options are available:
+
+- `boolean removeReadOnly` remove all schemas with `readOnly = true`
+- `boolean removeWriteOnly` remove all schemas with `writeOnly = true`
+- `string[] keepUnsupported` do not remove these schema properties
 
 ## Credits
 
-The converter is based on the excellent [openapi-to-json-schema][otjs] package.
+The converter is based on the excellent [openapi-to-json-schema][js-otjs] package.
+Type/format conversions are influenced by [this PHP port][php-otjs].
 
-[otjs]: https://github.com/mikunn/openapi-schema-to-json-schema
+[js-otjs]: https://github.com/mikunn/openapi-schema-to-json-schema
+[php-otjs]: https://github.com/hskrasek/openapi-schema-to-jsonschema
